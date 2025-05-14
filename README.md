@@ -14,7 +14,7 @@ A React + TypeScript application to create, edit, and visualize dynamic process 
   * Duplicate Node
   * Delete Node
 * **MiniMap & Controls**: Overview map, zoom, and pan controls for large diagrams.
-* **Branded Styling**: IAG purple gradient background, dotted overlay, styled context menu.
+* **Branded Styling**: dotted overlay, styled context menu.
 * **State Management**: Powered by Zustand for global node/edge store, enabling easy persistence.
 
 ## Installation
