@@ -1,0 +1,54 @@
+# IAG-Themed Flowchart
+
+A React + TypeScript application to create, edit, and visualize dynamic process diagrams, themed with IAG's brand colors.
+
+## Features
+
+* **Add Nodes**: Click on blank canvas to add a new node.
+* **Inline Editing**: Double-click a node to edit its label inline.
+* **Drag & Snap**: Move nodes around; they snap to a 20×20 grid for neat alignment.
+* **Connect Nodes**: Drag from a node’s top/bottom handle to create edges.
+* **Context Menu**: Right-click a node to:
+
+  * Edit Label
+  * Duplicate Node
+  * Delete Node
+* **MiniMap & Controls**: Overview map, zoom, and pan controls for large diagrams.
+* **Branded Styling**: IAG purple gradient background, dotted overlay, styled context menu.
+* **State Management**: Powered by Zustand for global node/edge store, enabling easy persistence.
+
+## Installation
+
+```bash
+# Clone the repo
+git clone <your-repo-url>
+cd <your-repo-folder>
+
+# Install dependencies
+yarn install
+
+# Run in development mode
+yarn dev
+```
+
+## Project Structure
+
+```
+src/
+├── App.tsx          # Main component and entry point
+├── components/     # (optional) Extracted React components
+├── store/          # Zustand store definitions
+├── styles/         # Global and styled-components
+└── index.tsx       # ReactDOM.render and providers
+```
+
+## Usage
+
+1. **Add a node**: Click an empty area.
+2. **Edit a node**: Double-click its label and type. Press Enter or click outside to save.
+3. **Duplicate/Delete a node**: Right-click and choose the action.
+4. **Connect nodes**: Drag from a handle to another node.
+5. **Move nodes**: Drag and they’ll snap to the grid.
+6. **Pan/Zoom**: Use controls or mouse wheel.
+
+
