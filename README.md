@@ -1,6 +1,6 @@
 # IAG-Themed Flowchart
 
-A React + TypeScript application to create, edit, and visualize dynamic process diagrams, themed with IAG's brand colors.
+A React + TypeScript application to create, edit, and visualize dynamic process diagrams, themed with IAG's brand colors. (sort of)
 
 ## Features
 
@@ -21,8 +21,8 @@ A React + TypeScript application to create, edit, and visualize dynamic process 
 
 ```bash
 # Clone the repo
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone git@github.com:LaurieWilliamsNZ/diagram-demo.git
+cd diagram-demo
 
 # Install dependencies
 yarn install
@@ -36,15 +36,15 @@ yarn dev
 ```
 src/
 ├── App.tsx          # Main component and entry point
-├── components/     # (optional) Extracted React components
+├── components/     # Extracted React components
 ├── store/          # Zustand store definitions
-├── styles/         # Global and styled-components
 └── index.tsx       # ReactDOM.render and providers
 ```
 
 ## Usage
 
 Bugs: Fantom nodes... will fix but probably not since this is just a case study.
+I don't think lock works. Will I fix it, probably not. But maybe.
 
 Disclaimer: Not production ready this is just for a tech interview.
 
