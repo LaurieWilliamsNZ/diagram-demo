@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import ReactFlow, { MiniMap, Controls, Background } from "react-flow-renderer";
+import ReactFlow, { MiniMap, Controls, Background, Node, Connection } from "react-flow-renderer";
 import { useFlowStore } from "../store/flowStore";
 import { ContextMenu, MenuItem } from "./ContextMenu";
 import styled from "styled-components";
@@ -42,17 +42,17 @@ const FlowCanvas: React.FC = () => {
         type: "editable",
         position: { x: e.clientX - 60, y: e.clientY - 20 },
         data: { label: `Item ${id}` },
-      } as any);
+      } as Node<{ label: string }>);
     },
     [addNode]
   );
 
-  const onConnect = useCallback((p: any) => connect(p), [connect]);
+  const onConnect = useCallback((p: Connection) => connect(p), [connect]);
   const onNodeDragStop = useCallback(
-    (_: any, n: any) => moveNode(n.id, n.position),
+    (_: React.MouseEvent, n: Node<{ label: string }>) => moveNode(n.id, n.position),
     [moveNode]
   );
-  const onNodeContext = useCallback((e: React.MouseEvent, n: any) => {
+  const onNodeContext = useCallback((e: React.MouseEvent, n: Node<{ label: string }>) => {
     e.preventDefault();
     setMenu({ visible: true, x: e.clientX, y: e.clientY, nodeId: n.id });
   }, []);
@@ -103,6 +103,8 @@ const FlowCanvas: React.FC = () => {
           onNodeDragStop={onNodeDragStop}
           nodeTypes={nodeTypes}
           fitView
+          snapToGrid={true}
+          snapGrid={[16, 16]}
         >
           <MiniMap
             nodeStrokeColor={() => theme.primary}
@@ -113,9 +115,9 @@ const FlowCanvas: React.FC = () => {
             //todo:fix prop
           }
           <Background
-            variant="dotsPattern"
-            gap={12}
-            size={1}
+            variant="dots"
+            gap={16}
+            size={2}
             color={theme.gridColor}
           />
         </ReactFlow>

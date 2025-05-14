@@ -8,11 +8,18 @@ const NodeContainer = styled.div`
   background: ${theme.nodeBg};
   color: ${theme.nodeFontColor};
   border: 2px solid ${theme.primary};
-  border-radius: ${theme.nodeBorderRadius}px;
-  padding: 8px;
+  border-radius: ${theme.nodeBorderRadius};
+  padding: 12px 16px;
+  min-width: 120px;
   text-align: center;
-  min-width: 100px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 500;
+  &:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+  }
 `;
 
 const LabelInput = styled.input`
