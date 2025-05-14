@@ -44,6 +44,10 @@ src/
 
 ## Usage
 
+Bugs: Fantom nodes... will fix but probably not since this is just a case study.
+
+Disclaimer: Not production ready this is just for a tech interview.
+
 1. **Add a node**: Click an empty area.
 2. **Edit a node**: Double-click its label and type. Press Enter or click outside to save.
 3. **Duplicate/Delete a node**: Right-click and choose the action.
